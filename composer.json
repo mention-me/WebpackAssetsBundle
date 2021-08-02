@@ -10,6 +10,11 @@
             "name": "Jules Bernable",
             "email": "ju1ius@laposte.net",
             "homepage": "http://github.com/ju1ius"
+        },
+        {
+            "name": "Matt Gill",
+            "email": "matt.gill@mention-me.com",
+            "homepage": "http://github.com/matthew-gill"
         }
     ],
     "require": {
