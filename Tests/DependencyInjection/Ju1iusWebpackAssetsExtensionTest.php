@@ -3,9 +3,10 @@
 namespace ju1ius\WebpackAssetsBundle\Tests\DependencyInjection;
 
 use ju1ius\WebpackAssetsBundle\DependencyInjection\Ju1iusWebpackAssetsExtension;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class Ju1iusWebpackAssetsExtensionTest extends \PHPUnit_Framework_TestCase
+class Ju1iusWebpackAssetsExtensionTest extends TestCase
 {
     /**
      * @var ContainerBuilder;
@@ -49,13 +50,13 @@ class Ju1iusWebpackAssetsExtensionTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->container = new ContainerBuilder();
         $this->extension = new Ju1iusWebpackAssetsExtension();
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         unset($this->container, $this->extension);
     }

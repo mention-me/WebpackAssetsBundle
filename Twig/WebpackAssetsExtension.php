@@ -3,11 +3,13 @@
 namespace ju1ius\WebpackAssetsBundle\Twig;
 
 use ju1ius\WebpackAssetsBundle\Helper\AssetHelper;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 /**
  * @author ju1ius
  */
-class WebpackAssetsExtension extends \Twig_Extension
+class WebpackAssetsExtension extends AbstractExtension
 {
     /**
      * @var \ju1ius\WebpackAssetsBundle\Helper\AssetHelper
@@ -22,7 +24,7 @@ class WebpackAssetsExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('webpack_asset', [$this, 'getAssetUrl']),
+            new TwigFunction('webpack_asset', [$this, 'getAssetUrl']),
         ];
     }
 
